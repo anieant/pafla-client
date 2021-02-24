@@ -1,0 +1,19 @@
+.blog {
+    padding:80px  0 ;
+    background: #fff8e6;
+}
+
+.card_items {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+
+}
+@media (max-width: 768px){
+    .card_items {
+       flex-wrap: wrap;
+    }
+    .blog {
+        padding:40px  0 ;
+    }
+}

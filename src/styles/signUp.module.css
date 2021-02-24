@@ -1,0 +1,93 @@
+.sign_up {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sign_up_left {
+    padding: 40px 20px 120px;
+    background: #ffffff;
+}
+
+.sign_up_form {
+    margin-top: 80px;
+}
+.auth_logo{
+    margin: 0 auto;
+}
+.sign_up_info {
+    background-color: #00130e;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+display: flex;
+    flex-direction: column;
+}
+.sign_up_info *{
+    color: #ffffff !important;
+}
+
+.sign_up_form .heading,.sign_up_info .heading {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.sign_up_info .heading{
+    margin-top: 260px;
+}
+
+.avatar_group {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.btn_primary_large {
+    height: 42px;
+    width: 100%;
+    border-radius: 25px;
+
+}
+
+.reg_form {
+    margin-top: 70px;
+}
+
+.reg_list{
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.list_img{
+    margin-right: 20px;
+}
+.img_bottom{
+    margin-top: auto;
+}
+.img_bottom img{
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+@media (max-width: 768px) {
+    .sign_up_form {
+        margin-top: 40px;
+    }
+    .reg_form {
+        margin-top: 30px;
+    }
+    .sign_up_left {
+        padding: 30px 15px;
+        background: #ffffff;
+    }
+    .sign_up_info{
+        padding-bottom: 30px;
+    }
+    .sign_up_info .heading{
+        margin-top: 40px;
+    }
+    .heading{
+        font-size: 28px !important;
+    }
+    .reg_list{
+        margin-top: 0;
+    }
+}

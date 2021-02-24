@@ -1,0 +1,183 @@
+.image_text_card {
+    width: 160px;
+    height: 160px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #9cc9bc;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.card_image_bg {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.card_text {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 10px;
+    line-height: 18px;
+}
+
+.blog_card {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.blog_link {
+    color: #f88d0e;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 20px;
+    display: block;
+}
+
+.statistics_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.statistics_card img {
+    max-height: 36px;
+}
+
+.statistics_text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.community_btn {
+    border-radius: 25px;
+    background: #ffffff;
+    border: none;
+    padding: 10px 35px;
+    height: 42px;
+    text-transform: uppercase;
+    margin: auto auto 0;
+    max-width: max-content;
+}
+
+.community_heading {
+    position: relative;
+    text-transform: uppercase;
+}
+
+.community_heading:after {
+    content: attr(data-after);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    text-transform: uppercase;
+}
+
+.insurance_card {
+    border-radius: 30px;
+    width: 30%;
+    padding: 35px 40px;
+    border: 1px solid #d7d7d7;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.insurance_btn {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    height: 42px;
+    margin-top: auto;
+    font-weight: 700;
+}
+.insurance_card_image img{
+    max-height: 120px;
+}
+.insurance_card_image{
+    margin-bottom: 30px;
+}
+.insurance_card_title{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #222927;
+}
+.insurance_card_ext{
+    color: #222927;
+    font-size: 16px;
+}
+@media (max-width: 992px) {
+    .image_text_card {
+        width: 110px;
+        height: 110px;
+        padding: 20px;
+        border-radius: 30px;
+        border: 1px solid #9cc9bc;
+        box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    }
+
+    div.card_text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .blog_card {
+        width: 45%;
+    }
+
+    .statistics_card {
+        margin-bottom: 20px;
+    }
+    .insurance_card {
+        width: 48%;
+        max-width: 350px;
+    }
+
+}
+@media (max-width: 768px){
+    .insurance_btn {
+        font-size: 12px;
+    }
+    .insurance_card {
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 576px) {
+    .card_image_bg {
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+    }
+
+    .image_text_card {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .blog_card {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+    .insurance_card {
+        width: 90%;
+        margin: 0 auto 30px;
+        max-width: initial;
+    }
+
+}

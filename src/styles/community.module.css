@@ -1,0 +1,22 @@
+.community {
+    padding: 100px 0;
+    background: #f3f9ff;
+}
+
+.card_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px !important;
+}
+
+
+@media (max-width: 768px){
+    .community {
+        padding: 40px 0;
+    }
+
+    .card_wrapper {
+        margin-top: 20px !important;
+    }
+}

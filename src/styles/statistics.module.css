@@ -1,0 +1,18 @@
+.statistics{
+    padding: 80px 0;
+    text-align: left;
+}
+.statistics_heading{}
+@media (max-width: 1200px){
+    .statistics{
+    text-align: center;
+}
+    .statistics_heading{
+    margin-bottom: 30px;
+}
+}
+@media (max-width: 786px){
+    .statistics{
+        padding: 40px 0;
+    }
+}
