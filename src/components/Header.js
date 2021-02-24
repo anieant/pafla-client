@@ -5,7 +5,7 @@ import {
 MenuOutlined
 } from '@ant-design/icons';
 import styles from '../styles/header.module.css'
-import {IMAGE_URL, INSURANCE, LOANS, SIGN_UP} from '../helpers/constants';
+import {ABOUT, HELP, IMAGE_URL, INSURANCE, LOANS, SIGN_UP} from '../helpers/constants';
 import {Link, NavLink} from 'react-router-dom';
 
 
@@ -19,10 +19,10 @@ const MenuList = ({itemClick,...rest}) => {
                 <NavLink to={LOANS}>Loans</NavLink>
             </li>
             <li className={styles.menu_item} onClick={itemClick ? itemClick : void(0)}>
-                <NavLink to={LOANS}>Help</NavLink>
+                <NavLink to={HELP}>Help</NavLink>
             </li>
             <li className={styles.menu_item} onClick={itemClick ? itemClick : void(0)}>
-                <NavLink to={LOANS}>About us</NavLink>
+                <NavLink to={ABOUT}>About us</NavLink>
             </li>
         </ul>
     )

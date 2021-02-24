@@ -4,6 +4,7 @@ import styles from '../../styles/home.about.module.css';
 import {IMAGE_URL} from '../../helpers/constants';
 import Gallery from '../Gallery';
 import InsuranceCard from '../InsuranceCard';
+import {Fade, Slide} from 'react-reveal';
 
 
 const {Title, Paragraph, Text} = Typography;
@@ -37,21 +38,21 @@ const shop = [
         title: 'Personal Loan',
         text: 'A Personal Loan PAFLA from  helps you meet your diverse financial needs during an emergency.',
         link: '/',
-        buttonText:'Apply now'
+        buttonText: 'Apply now'
     },
     {
         image: `${IMAGE_URL}car_loan.png`,
         title: 'Car Loan',
         text: 'PAFLA offers Car Loans up to 100% of on-road price of the car, with attractive interest rates and tenure up to 7 years..',
         link: '/',
-        buttonText:'Apply now'
+        buttonText: 'Apply now'
     },
     {
         image: `${IMAGE_URL}home_loan.png`,
         title: 'Home Loan',
         text: 'PAFLA Loans makes it simpler for those who want to realise this dream.',
         link: '/',
-        buttonText:'Apply now'
+        buttonText: 'Apply now'
     }
 
 ]
@@ -65,36 +66,49 @@ const SelfEmpolyed = () => {
                         <Col xs={{span: 24}} md={{span: 24}} lg={{span: 12}}>
                             <div className={styles.about_text}>
                                 <div className={styles.card_item}>
-                                    <Title level={2} className="section-title">Personal Loan for Self Employed
-                                        with No Income Proof</Title>
-                                    <Paragraph className="section-text">
-                                        Yes, it is possible for a self-employed to avail a personal loan without income
-                                        proof. I am sure, now you must be curious to know how? So, let me tell you that
-                                        though income proof is important as far as availing a loan is concerned, but in
-                                        some cases, a loan can also be given to self-employed individuals if they fail
-                                        to submit the proof. In that case, the lenders usually offer the secured
-                                        personal loan to the applicants by mortgaging their property documents. A
-                                        borrower needs to submit his/her property documents to the lender so as to get
-                                        the funds instantly via a secured personal loan.
-                                        <Divider style={{visibility: 'hidden', margin: 15}}/>
-                                        <b>Check your eligibility before you apply:</b>
-                                    </Paragraph>
+                                    <Slide bottom>
+                                        <Title level={2} className="section-title">Personal Loan for Self Employed
+                                            with No Income Proof</Title>
+                                    </Slide>
+                                    <Slide bottom>
+                                        <Paragraph className="section-text">
+                                            Yes, it is possible for a self-employed to avail a personal loan without
+                                            income
+                                            proof. I am sure, now you must be curious to know how? So, let me tell you
+                                            that
+                                            though income proof is important as far as availing a loan is concerned, but
+                                            in
+                                            some cases, a loan can also be given to self-employed individuals if they
+                                            fail
+                                            to submit the proof. In that case, the lenders usually offer the secured
+                                            personal loan to the applicants by mortgaging their property documents. A
+                                            borrower needs to submit his/her property documents to the lender so as to
+                                            get
+                                            the funds instantly via a secured personal loan.
+                                            <Divider style={{visibility: 'hidden', margin: 15}}/>
+                                            <b>Check your eligibility before you apply:</b>
+                                        </Paragraph>
+                                    </Slide>
                                     <List
                                         itemLayout="horizontal"
                                         split={false}
                                         dataSource={list}
-                                        renderItem={item => (
-                                            <List.Item>
-                                                <List.Item.Meta
-                                                    avatar={<img src={`${IMAGE_URL}check_circle_black.png`} alt=""/>}
-                                                    title={<Text className={styles.list_text_grey}>{item}</Text>}
-                                                />
-                                            </List.Item>
+                                        renderItem={(item, idx) => (
+                                            <Fade left delay={idx * 200}>
+                                                <List.Item>
+                                                    <List.Item.Meta
+                                                        avatar={<img src={`${IMAGE_URL}check_circle_black.png`}
+                                                                     alt=""/>}
+                                                        title={<Text className={styles.list_text_grey}>{item}</Text>}
+                                                    />
+                                                </List.Item>
+                                            </Fade>
                                         )}
                                     />
-
-                                    <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>get a
-                                        quote</Button>
+                                    <Fade bottom>
+                                        <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>get a
+                                            quote</Button>
+                                    </Fade>
                                 </div>
                             </div>
                         </Col>
@@ -103,8 +117,9 @@ const SelfEmpolyed = () => {
                         </Col>
                         <Col xs={{span: 24}}>
                             <div className="liability-shop">
-                                {shop.map(sh => <InsuranceCard image={sh.image} title={sh.title} text={sh.text}
-                                                               link={sh.link} buttonText={sh.buttonText ? sh.buttonText : ''}/>)}
+                                {shop.map((sh,idx) => <InsuranceCard delay={shop.length * 200 / idx} image={sh.image} title={sh.title} text={sh.text}
+                                                               link={sh.link}
+                                                               buttonText={sh.buttonText ? sh.buttonText : ''}/>)}
 
                             </div>
                         </Col>

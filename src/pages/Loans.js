@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import {IMAGE_URL} from '../helpers/constants';
-import Liability from '../components/insurance/Liability';
 import Subscribe from '../components/Subscribe';
 import Layout from '../components/Layout';
 import SelfEmpolyed from '../components/loans/SelfEmpolyed';
