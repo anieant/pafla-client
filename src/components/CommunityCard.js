@@ -8,7 +8,7 @@ const {Meta} = Card;
 const CommunityCard = ({image,title,text,link,color}) => {
     return (
         <Card
-            className={`${styles.blog_card} card_${color}`}
+            className={`${styles.blog_card} card_${color} ${styles.community_card}`}
             bordered={false}
             cover={
                 <img

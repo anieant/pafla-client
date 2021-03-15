@@ -24,8 +24,6 @@ const Community = () => {
                         />
                         <CommunityCard image={`${IMAGE_URL}community_2.png`} color="green" title="Community Blog"
                                        text="Make your voice heard and share your knowledge with your fellow freelancers by contributing to the #1 blog for freelancers. Or, read up and learn something new."/>
-                        <CommunityCard image={`${IMAGE_URL}community_3.png`} color="orange" title="Freelancers Hub"
-                                       text="New York City freelancers, join us for business workshops, legal and financial advice, networking, and more!"/>
 
                     </Col>
                 </Rotate>

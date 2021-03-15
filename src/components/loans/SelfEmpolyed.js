@@ -1,10 +1,11 @@
 import React from 'react';
 import {Button, Col, Divider, List, Row, Typography} from 'antd';
 import styles from '../../styles/home.about.module.css';
-import {IMAGE_URL} from '../../helpers/constants';
+import {IMAGE_URL, SIGN_UP} from '../../helpers/constants';
 import Gallery from '../Gallery';
 import InsuranceCard from '../InsuranceCard';
 import {Fade, Slide} from 'react-reveal';
+import {Link} from 'react-router-dom';
 
 
 const {Title, Paragraph, Text} = Typography;
@@ -106,8 +107,9 @@ const SelfEmpolyed = () => {
                                         )}
                                     />
                                     <Fade bottom>
-                                        <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>get a
-                                            quote</Button>
+                                        <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>
+                                            <Link to={SIGN_UP}>get a quote</Link>
+                                        </Button>
                                     </Fade>
                                 </div>
                             </div>

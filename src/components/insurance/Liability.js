@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from '../../styles/home.about.module.css';
 import {Button, Col, Divider, List, Row, Typography} from 'antd';
-import {IMAGE_URL} from '../../helpers/constants';
+import {IMAGE_URL, SIGN_UP} from '../../helpers/constants';
 import Gallery from '../Gallery';
 import InsuranceCard from '../InsuranceCard';
 import {Fade, Slide} from 'react-reveal';
+import {Link} from 'react-router-dom';
 
 const {Title, Paragraph, Text} = Typography;
 const list = [
@@ -34,37 +35,37 @@ const shop = [
         image: `${IMAGE_URL}health.png`,
         title: 'health',
         text: 'See plan options based on your location, age, and average income.',
-        link: '/'
+        link: SIGN_UP
     },
     {
         image: `${IMAGE_URL}dental.png`,
         title: 'dental',
         text: 'Protect your smile with dental insurance.',
-        link: '/'
+        link: SIGN_UP
     },
     {
         image: `${IMAGE_URL}vision.png`,
         title: 'vision',
         text: 'Ensure you can always see clearly.',
-        link: '/'
+        link: SIGN_UP
     },
     {
         image: `${IMAGE_URL}term_life.png`,
         title: 'term life',
         text: 'Protect your family\'s future.',
-        link: '/'
+        link: SIGN_UP
     },
     {
         image: `${IMAGE_URL}disability.png`,
         title: 'disability',
         text: 'Secure your income — get a plan B.',
-        link: '/'
+        link: SIGN_UP
     },
     {
         image: `${IMAGE_URL}liability.png`,
         title: 'liability',
         text: 'Protect your business from legal action.',
-        link: '/'
+        link: SIGN_UP
     }
 
 ]
@@ -112,8 +113,9 @@ const Liability = () => {
                                         )}
                                     />
                                     <Fade bottom>
-                                        <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>get a
-                                            quote</Button>
+                                        <Button size="large" className={`ant-btn-orange ${styles.btn_large}`}>
+                                            <Link to={SIGN_UP}>get a quote</Link>
+                                        </Button>
                                     </Fade>
                                 </div>
                             </div>

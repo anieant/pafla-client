@@ -33,7 +33,9 @@ div.card_text {
     width: 30%;
     margin-bottom: 20px;
 }
-
+.community_card {
+    width: 48%;
+}
 .blog_link {
     color: #f88d0e;
     text-transform: uppercase;

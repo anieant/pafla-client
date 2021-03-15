@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/subscribe.module.css';
-import {Button, Col, Form, Input, Row, Typography} from 'antd';
+import {Button, Col, Form, Input, InputNumber, Row, Typography} from 'antd';
 import {IMAGE_URL} from '../helpers/constants';
 import {Link} from 'react-router-dom';
 import {Fade} from 'react-reveal';
@@ -25,19 +25,31 @@ const Subscribe = () => {
                     <Title level={2} className={styles.subscribe_title}> Join Freelancers PAFLA– it's free!</Title>
                     <Paragraph className={styles.subscribe_text}>Get access to exclusive discounts, valuable
                         resources, and the largest community of freelancers on earth.</Paragraph>
+                </Col>
+                <Col xs={{span: 22, offset: 1}} lg={{span: 16, offset: 4}} md={{span: 20, offset: 2}}
+                     style={{margin: '0 auto'}}>
                     <Form
                         {...layout}
                         name="normal_login"
                         className={styles.subscribe_form}
                         onFinish={onFinish}
                     >
-                        <Fade left delay={300}>
+                        <Fade left delay={600}>
                             <Form.Item
 
                                 name="name"
                                 rules={[{required: true, message: 'Please input your Full Name!'}]}
                             >
                                 <Input size="large" placeholder="Full Name"/>
+                            </Form.Item>
+                        </Fade>
+                        <Fade left delay={300}>
+                            <Form.Item
+
+                                name="number"
+                                rules={[{required: true, message: 'Please input your number!'}]}
+                            >
+                                <InputNumber size="large" placeholder="Contact Number" bordered={false}/>
                             </Form.Item>
                         </Fade>
                         <Fade left>
